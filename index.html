@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هنرستان کاردانش گردشگری  | معرفی رشته‌های کار و دانش</title>
+    <meta name="description" content="هنرستان کاردانش گردشگری ارائه‌دهنده رشته‌های کامپیوتر، حسابداری، برق و طلاسازی با بالاترین کیفیت آموزشی">
+       
+    <!-- فونت‌ها -->
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+    
+    <!-- استایل‌ها -->
+   <style>
+/* Reset و فونت‌ها */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --dark-color: #1a1a2e;
+    --light-color: #f8f9fa;
+    --success-color: #4cc9f0;
+    --warning-color: #f72585;
+    --font-primary: 'Vazir', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+}
+
+body {
+    background-color: #f5f7fa;
+    color: var(--dark-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* هدر */
+.glass-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.glass-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.logo img {
+    height: 40px;
+    margin-left: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: -5px;
+    right: 0;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-register {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.btn-register:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.btn-register::after {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--dark-color);
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* بخش هیرو */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.8), rgba(63, 55, 201, 0.9)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero h1 span {
+    color: var(--success-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--primary-color);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-scroll span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-10px, -10px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(10px, 10px);
+    }
+}
+
+/* درباره هنرستان */
+.about {
+    padding: 100px 0;
+    background: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.about-text p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.about-image {
+    flex: 1;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* رشته‌های آموزشی */
+.fields {
+    padding: 100px 0;
+    background: #f5f7fa;
+}
+
+.fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.field-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.field-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.field-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.field-card:hover::before {
+    height: 10px;
+}
+
+.field-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.field-card:hover .field-icon {
+    background: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.field-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.field-card p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.field-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.field-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.field-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.field-card:hover .field-details {
+    max-height: 300px;
+}
+
+.field-details ul {
+    list-style: none;
+    text-align: right;
+    padding-right: 15px;
+}
+
+.field-details li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.field-details li i {
+    color: var(--primary-color);
+    margin-left: 5px;
+}
+
+/* فرم ثبت‌نام */
+.register {
+    padding: 100px 0;
+    background: white;
+}
+
+.register-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.register-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+    outline: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+/* فوتر */
+footer {
+    background: var(--dark-color);
+    color: white;
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-about .logo {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: #bbb;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-links h3::after, .footer-contact h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    right: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-right: 5px;
+}
+
+.footer-contact ul {
+    list-style: none;
+}
+
+.footer-contact li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #bbb;
+}
+
+.footer-contact i {
+    margin-left: 10px;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+.copyright {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.typing-animation {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+/* رسپانسیو */
+@media (max-width: 992px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-top: 40px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 80%;
+        height: calc(100vh - 80px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .register-form {
+        padding: 30px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+</style>
+    <!-- آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- هدر -->
+    <header class="glass-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png" alt="هنرستان رام">
+                    <span>هنرستان کاردانش <strong>گردشگری</strong></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#about">درباره ما</a></li>
+                    <li><a href="#fields">رشته‌ها</a></li>
+                    <li><a href="#gallery">گالری</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                    <li><a href="#register" class="btn-register">ثبت‌نام آنلاین</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- بخش هیرو -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="typing-animation">هنرستان کاردانش <span>گردشگری</span></h1>
+            <p>پرورش استعدادها، ساختن آینده‌های درخشان</p>
+            <div class="hero-btns">
+                <a href="#fields" class="btn-primary">مشاهده رشته‌ها</a>
+                <a href="#register" class="btn-secondary">ثبت‌نام آنلاین</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- درباره هنرستان -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>هنرستان کاردانش گردشگری</h2>
+                <p>مرکز تخصصی آموزش‌های مهارتی</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>درباره ما</h3>
+                    <p>هنرستان کاردانش کاردانش با بیش از ۱۵ سال سابقه درخشان در زمینه آموزش‌های مهارتی، مفتخر است با بهره‌گیری از اساتید مجرب و امکانات آموزشی پیشرفته، زمینه ساز اشتغال و موفقیت دانش‌آموزان عزیز باشد.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="counter" data-target="15">0</span>+
+                            <p>سال تجربه</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="counter" data-target="1200">0</span>+
+                            <p>دانش‌آموز فارغ‌التحصیل</p>
+                        </div>
+                        <div class="stat-item">
+                            <span class="counter" data-target="95">0</span>%
+                            <p>رضایت دانش‌آموزان</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/about.jpg" alt="درباره هنرستان گردشگری" class="parallax-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- معرفی رشته‌ها -->
+    <section id="fields" class="fields">
+        <div class="container">
+            <div class="section-header">
+                <h2>رشته‌های آموزشی</h2>
+                <p>مهارت‌های آینده‌ساز را با ما بیاموزید</p>
+            </div>
+            <div class="fields-grid">
+                <!-- رشته کامپیوتر -->
+                <div class="field-card">
+                    <div class="field-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>کامپیوتر</h3>
+                    <p>آموزش برنامه‌نویسی، شبکه، طراحی وب و نرم‌افزارهای کاربردی با جدیدترین متدهای آموزشی</p>
+                    <a href="#register" class="field-btn">ثبت‌نام در رشته</a>
+                    <div class="field-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> آموزش برنامه‌نویسی وب</li>
+                            <li><i class="fas fa-check"></i> طراحی و پیاده‌سازی شبکه</li>
+                            <li><i class="fas fa-check"></i> کار با نرم‌افزارهای اداری پیشرفته</li>
+                            <li><i class="fas fa-check"></i> طراحی گرافیک کامپیوتری</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- رشته حسابداری -->
+                <div class="field-card">
+                    <div class="field-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>حسابداری</h3>
+                    <p>آموزش اصول حسابداری، نرم‌افزارهای مالی، حسابرسی و مدیریت مالی برای بازار کار</p>
+                    <a href="#register" class="field-btn">ثبت‌نام در رشته</a>
+                    <div class="field-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> اصول حسابداری مالی و صنعتی</li>
+                            <li><i class="fas fa-check"></i> کار با نرم‌افزارهای هلو، سپیدار</li>
+                            <li><i class="fas fa-check"></i> حسابداری حقوق و دستمزد</li>
+                            <li><i class="fas fa-check"></i> اصول حسابرسی و گزارش‌گیری</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- رشته برق -->
+                <div class="field-card">
+                    <div class="field-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>برق صنعتی</h3>
+                    <p>آموزش نصب و تعمیرات سیستم‌های برق صنعتی، ساختمانی و تابلوهای کنترل</p>
+                    <a href="#register" class="field-btn">ثبت‌نام در رشته</a>
+                    <div class="field-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> سیم‌کشی ساختمان و صنعت</li>
+                            <li><i class="fas fa-check"></i> طراحی و مونتاژ تابلوهای برق</li>
+                            <li><i class="fas fa-check"></i> تعمیرات تجهیزات الکتریکی</li>
+                            <li><i class="fas fa-check"></i> اتوماسیون صنعتی مقدماتی</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- رشته طلاسازی -->
+                <div class="field-card">
+                    <div class="field-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>طلاسازی و جواهرات</h3>
+                    <p>آموزش طراحی و ساخت زیورآلات، سنگ‌تراشی، مخراج کاری و مرصع کاری</p>
+                    <a href="#register" class="field-btn">ثبت‌نام در رشته</a>
+                    <div class="field-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> طراحی و ساخت زیورآلات</li>
+                            <li><i class="fas fa-check"></i> سنگ‌تراشی و مخراج کاری</li>
+                            <li><i class="fas fa-check"></i> مرصع کاری و مشبک کاری</li>
+                            <li><i class="fas fa-check"></i> ریخته‌گری و آبکاری طلا</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- فرم ثبت‌نام -->
+    <section id="register" class="register">
+        <div class="container">
+            <div class="register-form">
+                <div class="form-header">
+                    <h2>فرم ثبت‌نام آنلاین</h2>
+                    <p>برای ثبت‌نام در هنرستان کاردانش رام فرم زیر را تکمیل کنید</p>
+                </div>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullname">نام و نام خانوادگی</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">شماره تماس</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ایمیل (اختیاری)</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="field">رشته مورد نظر</label>
+                        <select id="field" name="field" required>
+                            <option value="">-- انتخاب رشته --</option>
+                            <option value="کامپیوتر">کامپیوتر</option>
+                            <option value="حسابداری">حسابداری</option>
+                            <option value="برق صنعتی">برق صنعتی</option>
+                            <option value="طلاسازی">طلاسازی و جواهرات</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">مدرک تحصیلی</label>
+                        <select id="education" name="education" required>
+                            <option value="">-- انتخاب مدرک --</option>
+                            <option value="سوم متوسطه">سوم متوسطه</option>
+                            <option value="دیپلم">دیپلم</option>
+                            <option value="فوق دیپلم">فوق دیپلم</option>
+                            <option value="لیسانس">لیسانس</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">توضیحات (اختیاری)</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">ارسال درخواست ثبت‌نام</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- فوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="هنرستان گردشگری">
+                        <span>هنرستان کاردانش <strong>رام</strong></span>
+                    </div>
+                    <p>هنرستان کاردانش گردگشری با هدف ارائه آموزش‌های مهارتی و کاربردی به دانش‌آموزان عزیز تأسیس شده است تا بتوانند با کسب مهارت‌های لازم، آینده‌ای درخشان برای خود بسازند.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>لینک‌های سریع</h3>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#about">درباره ما</a></li>
+                        <li><a href="#fields">رشته‌ها</a></li>
+                        <li><a href="#gallery">گالری</a></li>
+                        <li><a href="#contact">تماس با ما</a></li>
+                        <li><a href="#register">ثبت‌نام آنلاین</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>اطلاعات تماس</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> آدرس: کرمانشاه، گذرنامه، خیابان رنجبر،  هنرستان گردشگری آل آقا</li>
+                        <li><i class="fas fa-phone"></i> تلفن: ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                        <li><i class="fas fa-mobile-alt"></i> همراه: ۰۹۱۲۳۴۵۶۷۸۹</li>
+                        <li><i class="fas fa-envelope"></i> ایمیل: info@arteshgah-ram.ir</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <div class="container">
+                <p>© کلیه حقوق برای هنرستان کاردانش گردشگری محفوظ است - ۱۴۰۳</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- اسکریپت‌ها -->
+    <script>
+// main.js - فایل اصلی اسکریپت‌ها
+
+document.addEventListener('DOMContentLoaded', function() {
+    // فعال کردن منوی هامبورگر در حالت موبایل
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('toggle');
+        
+        // انیمیشن لینک‌های منو
+        links.forEach((link, index) => {
+            if (link.style.animation) {
+                link.style.animation = '';
+            } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
+    });
+
+    // تغییر هدر هنگام اسکرول
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.glass-header');
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // اسموث اسکرول برای لینک‌های منو
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            // بستن منو در حالت موبایل
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('toggle');
+                links.forEach(link => {
+                    link.style.animation = '';
+                });
+            }
+        });
+    });
+
+    // شمارنده آمار
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(animateCounters, 1);
+            } else {
+                counter.innerText = target;
+            }
+        });
+    };
+    
+    // فعال کردن شمارنده هنگام اسکرول به بخش مربوطه
+    const statsSection = document.querySelector('.stats');
+    const statsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            animateCounters();
+            statsObserver.unobserve(statsSection);
+        }
+    }, { threshold: 0.5 });
+    
+    statsObserver.observe(statsSection);
+
+    // پارالاکس برای تصاویر
+    const parallaxImages = document.querySelectorAll('.parallax-img');
+    
+    window.addEventListener('scroll', () => {
+        parallaxImages.forEach(img => {
+            const scrollPosition = window.pageYOffset;
+            img.style.transform = `translateY(${scrollPosition * 0.3}px)`;
+        });
+    });
+
+    // انیمیشن اسکرول برای المان‌ها
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.about-content, .field-card, .register-form');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }
+        });
+    };
+    
+    // تنظیم حالت اولیه برای انیمیشن‌ها
+    document.querySelectorAll('.about-content, .field-card, .register-form').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease-out';
+    });
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // اجرای اولیه
+});
+   // form-validation.js - اعتبارسنجی فرم ثبت‌نام
+
+document.addEventListener('DOMContentLoaded', function() {
+    const registrationForm = document.getElementById('registrationForm');
+    
+    if (registrationForm) {
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // اعتبارسنجی فیلدها
+            const fullname = document.getElementById('fullname');
+            const phone = document.getElementById('phone');
+            const field = document.getElementById('field');
+            const education = document.getElementById('education');
+            
+            let isValid = true;
+            
+            // اعتبارسنجی نام کامل
+            if (fullname.value.trim() === '') {
+                showError(fullname, 'لطفا نام و نام خانوادگی را وارد کنید');
+                isValid = false;
+            } else {
+                showSuccess(fullname);
+            }
+            
+            // اعتبارسنجی شماره تلفن
+            const phoneRegex = /^(\+98|0)?9\d{9}$/;
+            if (!phoneRegex.test(phone.value.trim())) {
+                showError(phone, 'شماره تلفن معتبر نیست');
+                isValid = false;
+            } else {
+                showSuccess(phone);
+            }
+            
+            // اعتبارسنجی رشته
+            if (field.value === '') {
+                showError(field, 'لطفا یک رشته را انتخاب کنید');
+                isValid = false;
+            } else {
+                showSuccess(field);
+            }
+            
+            // اعتبارسنجی مدرک تحصیلی
+            if (education.value === '') {
+                showError(education, 'لطفا مدرک تحصیلی را انتخاب کنید');
+                isValid = false;
+            } else {
+                showSuccess(education);
+            }
+            
+            // اگر فرم معتبر بود، ارسال شود
+            if (isValid) {
+                submitForm();
+            }
+        });
+        
+        // اعتبارسنجی بلادرنگ
+        document.getElementById('fullname').addEventListener('input', function() {
+            if (this.value.trim() !== '') {
+                showSuccess(this);
+            }
+        });
+        
+        document.getElementById('phone').addEventListener('input', function() {
+            const phoneRegex = /^(\+98|0)?9\d{9}$/;
+            if (phoneRegex.test(this.value.trim())) {
+                showSuccess(this);
+            }
+        });
+    }
+    
+    // نمایش خطا
+    function showError(input, message) {
+        const formGroup = input.parentElement;
+        formGroup.classList.add('error');
+        
+        let errorMessage = formGroup.querySelector('.error-message');
+        if (!errorMessage) {
+            errorMessage = document.createElement('small');
+            errorMessage.className = 'error-message';
+            formGroup.appendChild(errorMessage);
+        }
+        
+        errorMessage.textContent = message;
+    }
+    
+    // نمایش موفقیت
+    function showSuccess(input) {
+        const formGroup = input.parentElement;
+        formGroup.classList.remove('error');
+        
+        const errorMessage = formGroup.querySelector('.error-message');
+        if (errorMessage) {
+            errorMessage.remove();
+        }
+    }
+    
+    // ارسال فرم (شبیه‌سازی)
+    function submitForm() {
+        const submitBtn = document.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        
+        // نمایش وضعیت ارسال
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'در حال ارسال...';
+        submitBtn.style.opacity = '0.7';
+        
+        // شبیه‌سازی ارسال به سرور
+        setTimeout(() => {
+            // نمایش پیام موفقیت
+            const formHeader = document.querySelector('.form-header');
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <h3>ثبت‌نام با موفقیت انجام شد!</h3>
+                <p>کارشناسان ما به زودی با شما تماس خواهند گرفت.</p>
+            `;
+            
+            registrationForm.style.display = 'none';
+            formHeader.insertAdjacentElement('afterend', successMessage);
+            
+            // بازنشانی فرم
+            setTimeout(() => {
+                registrationForm.reset();
+                registrationForm.style.display = 'block';
+                successMessage.remove();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                submitBtn.style.opacity = '1';
+            }, 5000);
+        }, 1500);
+    }
+});
+// animations.js - انیمیشن‌های سفارشی
+
+document.addEventListener('DOMContentLoaded', function() {
+    // انیمیشن تایپینگ برای عنوان هیرو
+    const typingText = document.querySelector('.typing-animation');
+    if (typingText) {
+        const text = typingText.textContent;
+        typingText.textContent = '';
+        
+        let i = 0;
+        const typing = () => {
+            if (i < text.length) {
+                typingText.textContent += text.charAt(i);
+                i++;
+                setTimeout(typing, 100);
+            }
+        };
+        
+        typing();
+    }
+    
+    // انیمیشن کارت‌های رشته‌ها
+    const fieldCards = document.querySelectorAll('.field-card');
+    fieldCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.1)';
+            
+            const icon = this.querySelector('.field-icon');
+            if (icon) {
+                icon.style.background = 'var(--primary-color)';
+                icon.style.color = 'white';
+                icon.style.transform = 'rotateY(180deg)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.05)';
+            
+            const icon = this.querySelector('.field-icon');
+            if (icon) {
+                icon.style.background = 'rgba(67, 97, 238, 0.1)';
+                icon.style.color = 'var(--primary-color)';
+                icon.style.transform = 'rotateY(0)';
+            }
+        });
+    });
+    
+    // انیمیشن دکمه‌ها
+    const buttons = document.querySelectorAll('.btn-primary, .btn-secondary, .field-btn, .submit-btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // انیمیشن اسکرول هیرو
+    const heroScroll = document.querySelector('.hero-scroll span');
+    if (heroScroll) {
+        setInterval(() => {
+            heroScroll.style.animation = 'none';
+            setTimeout(() => {
+                heroScroll.style.animation = 'scrollDown 2s infinite';
+            }, 10);
+        }, 2000);
+    }
+    
+    // انیمیشن لینک‌های فوتر
+    const footerLinks = document.querySelectorAll('.footer-links a');
+    footerLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.paddingRight = '10px';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.paddingRight = '5px';
+        });
+    });
+    
+    // انیمیشن آیکون‌های شبکه‌های اجتماعی
+    const socialIcons = document.querySelectorAll('.social-links a');
+    socialIcons.forEach(icon => {
+        icon.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px) scale(1.1)';
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+</script>
+</body>
+</html>
